@@ -8,27 +8,28 @@ class Random_pairs_test < Minitest::Test
 	end
 
 	def test_for_array
-        assert_equal([], random_pairs([]))
+        assert_equal(Array, random_pairs([]).class)
     end
 
 	def test_4_pair
-		assert_equal(4, random_pairs(["scott", "bob", "jill", "peggy", "billybob", "joe", "johnny", "sue"]).length)
+		assert_equal(4, random_pairs(["scott", "bob", "jill", "peggy", "billybob", "joe", "johnny", "sue"]).size)
 	end
 
 	def test_2_pairs
-		assert_equal(2, random_pairs(["scott", "bob", "jack", "jill"]).length)
+		assert_equal(2, random_pairs(["scott", "bob", "jack", "jill"]).size)
 	end
 
 	def test_2_pairs_with_odd_number_people
-		assert_equal(2, random_pairs(["scott", "bob", "jack", "jill", "peggy"]).length)
+		assert_equal(2, random_pairs(["scott", "bob", "jack", "jill", "peggy"]).size)
 	end
 
 	def test_3_pairs_with_odd_number_people
-		assert_equal(3, random_pairs(["scott", "bob", "jack", "jill", "peggy", "sue", "billybob"]).length)
+		assert_equal(3, random_pairs(["scott", "bob", "jack", "jill", "peggy", "sue", "billy"]).size)
 	end
 
 	def test_4_pairs_with_odd_number_people
-		assert_equal(4, random_pairs(["scott", "bob", "jill", "peggy", "billybob", "joe", "johnny", "sue", "john"]).length)
+		assert_equal(4, random_pairs(["scott", "bob", "jill", "peggy", "billybob", "joe", "johnny", "sue", "john"]).size)
+		print random_pairs(["scott", "bob", "jill", "peggy", "billybob", "joe", "johnny", "sue", "john"])
 	end
 
 end

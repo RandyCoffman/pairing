@@ -15,6 +15,10 @@ class Random_pairs_test < Minitest::Test
 		assert_equal(4, random_pairs(["scott", "bob", "jill", "peggy", "billybob", "joe", "johnny", "sue"]).size)
 	end
 
+	def test_3_pairs
+		assert_equal(3, random_pairs(["scott", "bob", "jack", "jill", "peggy", "billy"]).size)
+	end
+
 	def test_2_pairs
 		assert_equal(2, random_pairs(["scott", "bob", "jack", "jill"]).size)
 	end

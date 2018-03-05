@@ -29,7 +29,6 @@ class Random_pairs_test < Minitest::Test
 
 	def test_4_pairs_with_odd_number_people
 		assert_equal(4, random_pairs(["scott", "bob", "jill", "peggy", "billybob", "joe", "johnny", "sue", "john"]).size)
-		print random_pairs(["scott", "bob", "jill", "peggy", "billybob", "joe", "johnny", "sue", "john"])
 	end
 
 end

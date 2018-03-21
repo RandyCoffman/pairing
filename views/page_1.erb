@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+function pairs() {
+    var y = document.getElementById("myInput").value;
+    document.getElementById("names").innerHTML = "Enter the names to pair in the boxes.<br>";
+    for (var x = 1; x <= y; x++) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "text" + x;
+        input.id = "show";
+        input.required = true;
+        input.placeholder = "Name";
+        document.getElementById("names").appendChild(input).value;
+    }
+}
+	</script>
+	<title></title>
+</head>
+<body>
+	<h1>Pair Picker</h1>
+	<form method = "post" action = "choice" id = "text_box">
+    <input type ="number" min = 2 autofocus = "autofocus" id ="myInput" oninput = "pairs()">
+    <p id = "names" name = "name[]"></p>
+    <br>
+    <input type = "submit">
+</form>
+</body>
+</html>

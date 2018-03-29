@@ -11,7 +11,6 @@ post "/keep" do
     total_names = params[:names]
     names = total_names[0].values
     session[:pairs] = random_pairs(names)
-    "this is an array #{session[:pairs]}"
     redirect "/list_of_pairs"
 end
 
@@ -22,12 +21,10 @@ end
 
 post "/redo" do
     session[:pair] = params[:liked_pairs]
-    p session[:pair]
     session[:hated_pairs] = []
     session[:pair].each do |pairs|
         session[:hated_pairs].push(pairs.split(','))
     end
-    p session[:hated_pairs]
     redirect "/done_yet"
 end
 
@@ -56,6 +53,5 @@ end
 
 get "/finished" do
     session[:liked_pairs]
-    p session[:liked_pairs]
     erb :final_page, locals:{liked_pairs: session[:liked_pairs]}
 end

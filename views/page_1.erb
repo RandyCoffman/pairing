@@ -3,16 +3,16 @@
 <head>
 	<script>
 function pairs() {
-    var y = document.getElementById("myInput").value;
+    let y = document.getElementById("pairNumbers").value;
     document.getElementById("names").innerHTML = "Enter the names to pair in the boxes.<br>";
-    for (var x = 1; x <= y; x++) {
-        var input = document.createElement("input");
-        input.type = "text";
-        input.name = "text" + x;
-        input.id = "show";
-        input.required = true;
-        input.placeholder = "Name";
-        document.getElementById("names").appendChild(input).value;
+    for (let x = 1; x <= y; x++) {
+        let textInput = document.createElement("input");
+        textInput.type = "text";
+        textInput.name = "names[]" + x;
+        textInput.id = "show";
+        textInput.required = true;
+        textInput.placeholder = "Name";
+        document.getElementById("names").appendChild(textInput).value;
     }
 }
 	</script>
@@ -20,11 +20,11 @@ function pairs() {
 </head>
 <body>
 	<h1>Pair Picker</h1>
-	<form method = "post" action = "choice" id = "text_box">
-    <input type ="number" min = 2 autofocus = "autofocus" id ="myInput" oninput = "pairs()">
-    <p id = "names" name = "name[]"></p>
+	<form method="post" action="/keep" id="text_box">
+    <input type="number" min=2 autofocus id="pairNumbers" oninput="pairs()">
+    <p id="names"></p>
     <br>
-    <input type = "submit">
+    <input type="submit">
 </form>
 </body>
 </html>

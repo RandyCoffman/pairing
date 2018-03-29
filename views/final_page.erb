@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>pairs</title>
+</head>
+<body>
+	<h1>These are your final pairs</h1>
+    <% session[:liked_pairs].each do |pairs| %>
+        <form method="post" action="/redo">
+      	<h2><%= pairs.join(', ') %></h2> 
+      <% end %>
+
+</body>
+</html>

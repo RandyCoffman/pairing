@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>pairs</title>
+</head>
+<body>
+	<h1>Check the pairs that you don't like and click "redo" to redo the pairs clicked and click "done" if you like all the pairs.</h1>
+    <% session[:pairs].each do |pair| %>
+        <form method="post" action="/redo">
+      	<h2> <input type="checkbox" name="liked_pairs[]" value='<%= pair.join(',') %>'> <%= pair.join(', ') %></h2> 
+      <% end %>
+
+
+        <input type = "submit" value="redo">
+
+        </form>
+
+        <br><br>
+
+        <form method="post" action="/done">
+        	<input type="submit" value="done">
+        </form>
+</body>
+</html>

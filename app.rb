@@ -55,3 +55,15 @@ get "/finished" do
     session[:liked_pairs]
     erb :final_page, locals:{liked_pairs: session[:liked_pairs]}
 end
+
+get "/news" do
+    erb :news
+end
+
+get "/contact" do
+    erb :contact
+end
+
+get "/about-us" do
+    erb :about
+end

@@ -4,7 +4,28 @@
 	<link rel= "stylesheet" href= "css/style.css">
 	<title></title>
 </head>
-<body>
-	<%= yield %>
+<body> 
+	<div class="header">
+	<header>
+	<div class="topnav">
+		<div>
+	  		<a class="active" href="/"> <img src="http://www.minedminds.org/images/logo.png"></a>
+	  	</div>
+	  	<div>
+		  	<a href="/news">News</a>
+		  	<a href="/contact">Contact</a>
+		  	<a href="/about-us">About</a>
+	  	</div>
+	</div>
+	  </header>
+	</div>
+		<%= yield %>
+	<div class="scrollbar">
+ 	</div>
+	<div class="footer">
+		<footer>
+			<p><a href="http://www.minedminds.org" target = "_blank">Mined Minds</a><br>&copy; 2018</p>
+		</footer>
+	</div>
 </body>
 </html>

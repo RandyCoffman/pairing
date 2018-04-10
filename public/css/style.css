@@ -1,6 +1,62 @@
-body{
+body {
 	text-align: center;
 	background-image: url("/img/peas.png");
-	background-size: 100% 100%;
+	background-size: auto;
 	background-repeat: no-repeat;
+	margin-top: 10rem;
+}
+
+img {
+	border: 0;
+	width: 5%;
+	height: 5%;
+	background-color: #000000;
+	margin-top: 0rem;
+}
+
+.topnav a {
+ 	background-color: #000000;
+	color: #FFFFFF;
+	padding: 10px 10px;
+	font-size: 17px;
+}
+
+.topnav .active {
+	background-color: white;
+}
+
+.topnav img a:hover {
+	background-color: black;
+}
+
+.topnav a:hover {
+  	background-color: white;
+  	color: black;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+}
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+#feed {
+	font-weight: 700;
+}
+
+.scrollbar {
+	overflow:auto; 
+	height:556px;
+	width:564px;
 }
